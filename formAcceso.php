@@ -20,12 +20,12 @@
         <form action="registro.php" method="POST">
           <div class="form-group">
             <label for="correo">Correo</label>
-            <input type="email" class="form-control" id= "correo" name="correo" placeholder="Insertar correo">
+            <input type="email" class="form-control" id= "correo" name="correo" placeholder="Introduce el correo">
           </div>
 
           <div class="form-group">
-            <label for="contraseña">Contraseña</label>
-            <input type="password" class="form-control" id= "contraseña" name="contraseña" placeholder="Insertar contraseña">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" class="form-control" id= "contrasena" name="contrasena" placeholder="Introduce la contraseña">
           </div>
           <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Entrar">
