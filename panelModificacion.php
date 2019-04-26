@@ -10,10 +10,10 @@ error_reporting(0);
 <!-- Cabecera -->
 
 <head>
+	<?php
+	include('head.php');
+	?>
 	<title>Principal</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="estilos.css">
 </head>
 
 <!-- Cuerpo -->
@@ -74,6 +74,8 @@ error_reporting(0);
 							</select>
 							<br>
 							<input type="submit" class="btn btn-primary" value="Modificar">
+							</script>
+
 				            </div>
 				        </form>
 					</div>
@@ -85,8 +87,5 @@ error_reporting(0);
 	<?php
         include("pie.php");
     ?> 
-
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

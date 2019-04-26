@@ -10,10 +10,17 @@ error_reporting(0);
 <!-- Cabecera -->
 
 <head>
-	<title>Principal</title>
 	<?php
 	include('head.php');
 	?>
+	<script>
+      $(document).ready(function(){
+        $('#usuarios').DataTable({
+
+        });
+      });
+    </script>
+	<title>Principal</title>
 </head>
 
 <!-- Cuerpo -->

@@ -7,11 +7,11 @@ session_start();
 
 <!-- Cabecera -->
 
-<head>
-	<title>Index</title>
+<head>	
 	<?php
 	include('head.php');
 	?>
+	<title>Index</title>
 </head>
 
 <!-- Cuerpo -->

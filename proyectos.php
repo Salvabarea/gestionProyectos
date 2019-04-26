@@ -10,10 +10,17 @@ error_reporting(0);
 <!-- Cabecera -->
 
 <head>
-	<title>Proyectos</title>
 	<?php
-	include('head.php');
+		include('head.php');
 	?>
+	<script>
+      $(document).ready(function(){
+        $('#proyectos').DataTable({
+
+        });
+      });
+    </script>
+    <title>Proyectos</title>
 </head>
 
 <!-- Cuerpo -->
