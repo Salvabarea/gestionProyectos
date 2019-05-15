@@ -14,10 +14,17 @@ if ($_SESSION['rol'] == 0) {
 <!-- Cabecera -->
 
 <head>
-	<title>Principal</title>
 	<?php
-	include('head.php');
+		include('head.php');
 	?>
+	<script>
+      $(document).ready(function(){
+        $('#usuarios').DataTable({
+
+        });
+      });
+    </script>	
+	<title>Principal</title>
 </head>
 
 <!-- Cuerpo -->
@@ -40,8 +47,12 @@ if ($_SESSION['rol'] == 0) {
 					include ("buscadorUsuarios.php");
 					include ("buscadorId.php");
 				?>
-				<h6><strong>Modificar usuario:</strong></h6>
-				<a class="btn btn-outline-success" href="panelModificacion.php" role="button">Modificar</a>
+				<br>
+				<h6><strong>Modificar información de usuario:</strong></h6>
+				<a class="btn btn-outline-success" href="panelModificacion.php" role="button">Modificar usuario</a>
+				<br><br>
+				<h6><strong>Dar de alta a un usuario:</strong></h6>
+				<a class="btn btn-outline-success" href="panelAlta.php" role="button">Alta usuario</a>
 
 			</div>
 			<div class="col-md-8">

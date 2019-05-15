@@ -74,9 +74,7 @@ error_reporting(0);
 							</select>
 							<br>
 							<input type="submit" class="btn btn-primary" value="Modificar">
-							</script>
-
-				            </div>
+				           </div>
 				        </form>
 					</div>
 				</div>

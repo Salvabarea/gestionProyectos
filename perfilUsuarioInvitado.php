@@ -25,7 +25,7 @@ include ("_con.php");
 			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
 		</div>
 		<?php
-	        include("navbar.php");
+	        include("navbarInvitado.php");
 	    ?> 
 	</header>
 

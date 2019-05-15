@@ -8,10 +8,13 @@ session_start();
 <!-- Cabecera -->
 
 <head>
-	<title>Principal</title>
 	<?php
-	include('head.php');
+		include('head.php');
 	?>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<title>Calendario</title>
+
 	<!-- FullCalendar -->
 	<link href='core/main.css' rel='stylesheet' />
     <link href='daygrid/main.css' rel='stylesheet' />
@@ -55,7 +58,6 @@ session_start();
         include("pie.php");
     ?> 
 
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>

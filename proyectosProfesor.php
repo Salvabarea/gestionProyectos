@@ -2,13 +2,6 @@
 session_start();
 include('_con.php');
 error_reporting(0);
-if ($_SESSION['rol'] == 1) {
-	Header('Location: proyectosProfesor.php');
-}
-
-function alerta1 ($alerta1) {
-	echo "<?php <script>jQuery(function(){swal(\"¡Bien!\", \"Condición cumplida\", \"success\");});</script> >?";
-}
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +42,12 @@ function alerta1 ($alerta1) {
 			<div class="col-md-4">
 				<?php
 					include("buscador.php");
-				?> 
+				?>
+				<h6><strong>Subir un proyecto:</strong></h6>
+				<a class="btn btn-outline-success" href="subirProyecto.php" role="button">Subir</a>
+				<br><br>
+				<h6><strong>Calificar o modificar un proyecto:</strong></h6>
+				<a class="btn btn-outline-success" href="calificar.php" role="button">Calificar</a>  
 			</div>
 			<div class="col-md-8">
 				<h4>Resultado:</h4>

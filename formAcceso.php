@@ -31,9 +31,11 @@
             <input type="submit" class="btn btn-primary" value="Entrar">
           </div>
         </form>
-
+        <label>O entra como invitado: </label>
+        <div class="form-group">
+          <a class="btn btn-info" href="principalInvitado.php" role="button">Invitado</a>
+        </div>
       </div>
-
     </div>
-
+  <br>
 <section/>
