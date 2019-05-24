@@ -2,62 +2,132 @@
 session_start();
 ?>
 
+
 <!DOCTYPE html>
 <html>
-
-<!-- Cabecera -->
-
 <head>
-	<?php
-		include('head.php');
-	?>
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<title>Calendario</title>
+<meta charset='utf-8' />
+<link href='css/core/main.min.css' rel='stylesheet' />
+<link href='css/daygrid/main.min.css' rel='stylesheet' />
+<script src='js/core/main.min.js'></script>
+<script src='js/interaction/main.min.js'></script>
+<script src='js/daygrid/main.min.js'></script>
+<script src='js/core/locales/es.js'></script>
+<script>
 
-	<!-- FullCalendar -->
-	<link href='core/main.css' rel='stylesheet' />
-    <link href='daygrid/main.css' rel='stylesheet' />
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
 
-    <script src='core/main.js'></script>
-    <script src='daygrid/main.js'></script>
-    <script>
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      locale: 'es',
+      plugins: [ 'interaction', 'dayGrid' ],
+      defaultDate: '2019-04-12',
+      editable: true,
+      eventLimit: true,
+      events: 'eventos.php'
+      /*events: [
+        {
+          title: 'All Day Event',
+          start: '2019-04-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2019-04-07',
+          end: '2019-04-10'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-04-09T16:00:00'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-04-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2019-04-11',
+          end: '2019-04-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-04-12T10:30:00',
+          end: '2019-04-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2019-04-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-04-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2019-04-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2019-04-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2019-04-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2019-04-28'
+        }
+      ]*/
+    });
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
+    calendar.render();
+  });
 
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          plugins: [ 'dayGrid' ]
-        });
+</script>
+<style>
 
-        calendar.render();
-      });
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+  }
 
-    </script>
+  #calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+</style>
+  
+  <title>Calendario</title>
+  <?php
+  include('head.php');
+  ?>
 
 </head>
-
-<!-- Cuerpo -->
-
 <body>
 
-	<!-- Cabecera -->
-	<header>
-		<div class="container">
-			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
-		</div>
-		<?php
-	        include("navbar.php");
-	    ?> 
-	</header>
+  <header>
+    <div class="container">
+      <h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+    </div>
+    <?php
+          include("navbar.php");
+      ?> 
+  </header>
+  <br>
 
-	<div id='calendar'></div>
+  <!-- Calendario -->
+  <div id='calendar'></div>
+  <!-- Fin calendario -->
 
-	<!-- Pie -->
-	<?php
+  <br>
+  <?php
         include("pie.php");
     ?> 
-
-
 </body>
 </html>
