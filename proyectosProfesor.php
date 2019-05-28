@@ -47,7 +47,10 @@ error_reporting(0);
 				<a class="btn btn-outline-success" href="subirProyecto.php" role="button">Subir</a>
 				<br><br>
 				<h6><strong>Calificar o modificar un proyecto:</strong></h6>
-				<a class="btn btn-outline-success" href="calificar.php" role="button">Calificar</a>  
+				<a class="btn btn-outline-success" href="calificar.php" role="button">Calificar</a>
+				<br><br>
+				<h6><strong>Eliminar un proyecto:</strong></h6>
+				<a class="btn btn-outline-danger" href="eliminar.php" role="button">Eliminar</a>  
 			</div>
 			<div class="col-md-8">
 				<h4>Resultado:</h4>

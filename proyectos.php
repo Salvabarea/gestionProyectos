@@ -49,7 +49,9 @@ function alerta1 ($alerta1) {
 			<div class="col-md-4">
 				<?php
 					include("buscador.php");
-				?> 
+				?>
+				<h6><strong>Subir un proyecto:</strong></h6>
+				<a class="btn btn-outline-success" href="subirProyecto.php" role="button">Subir</a>
 			</div>
 			<div class="col-md-8">
 				<h4>Resultado:</h4>

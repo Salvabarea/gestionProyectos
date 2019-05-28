@@ -15,6 +15,9 @@
       <li class="nav-item">
         <a class="nav-link" href="usuariosInvitado.php">Usuarios</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="calendarioInvitado.php">Calendario</a>
+      </li>
     </ul>
   </div>
   <div class="collapse navbar-collapse w-50 order-2 dual-collapse2">
