@@ -19,8 +19,8 @@
           <td>'.$registro[0].'</td>
           <td>'.$registro[1].'</td>
           <td>'.$registro[2].'</td>
-          <td>'.$registro[3].'</td>
           <td>'.$registro[4].'</td>
+          <td>'.$registro[3].'</td>
           <td><a href='.$registro[5].'><img src="img/dw.png"></td>
         </tr>
       ';

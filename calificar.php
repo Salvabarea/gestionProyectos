@@ -2,6 +2,7 @@
 session_start();
 include('_con.php');
 error_reporting(0);
+$nombre = $_SESSION['nombre'];
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,19 @@ error_reporting(0);
 	include('head.php');
 	?>
 	<title>Principal</title>
+	<script>
+		function funcion() {
+		    <?php
+
+			$file = fopen("archivos/logs.txt", "a");
+
+			fwrite($file, "El usuario $nombre ha calificado un proyecto.".PHP_EOL);
+
+			fclose($file);
+
+			?>
+		}
+	</script>
 </head>
 
 <!-- Cuerpo -->
@@ -75,7 +89,7 @@ error_reporting(0);
 				            <label for="alumno">Alumno:</label>
 				            <input type="text" class="form-control" id= "alumno" name="alumno" placeholder=<?php print_r($alumno) ?>>
 							<br>
-							<input type="submit" class="btn btn-primary" value="Modificar">
+							<input type="submit" class="btn btn-primary" value="Modificar" onclick="funcion()">
 				           </div>
 				        </form>
 

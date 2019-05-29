@@ -2,12 +2,8 @@
 session_start();
 include('_con.php');
 error_reporting(0);
-if ($_SESSION['rol'] == 1) {
+if ($_SESSION['rol'] == 'profesor') {
 	Header('Location: proyectosProfesor.php');
-}
-
-function alerta1 ($alerta1) {
-	echo "<?php <script>jQuery(function(){swal(\"¡Bien!\", \"Condición cumplida\", \"success\");});</script> >?";
 }
 ?>
 
@@ -27,6 +23,7 @@ function alerta1 ($alerta1) {
         });
       });
     </script>
+
     <title>Proyectos</title>
 </head>
 

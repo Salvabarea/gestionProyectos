@@ -2,7 +2,7 @@
 session_start();
 include('_con.php');
 error_reporting(0);
-if ($_SESSION['rol'] == 0) {
+if ($_SESSION['rol'] == 'alumno') {
 	Header('Location: usuariosAlmn.php');
 }
 

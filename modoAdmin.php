@@ -1,7 +1,7 @@
 <?php
 session_start();
-if ($_SESSION['rol'] == 'admin') {
-	Header('Location: modoAdmin.php');
+if ($_SESSION['rol'] != 'admin') {
+	Header('Location: index.php');
 }
 ?>
 
@@ -35,15 +35,15 @@ if ($_SESSION['rol'] == 'admin') {
 		<div class="row">
 			<div class="col-md-8">
 				<h3 class="mb-2 mt-3">
-					Bienvenido/a  <?php print_r($_SESSION['nombre']) ?>.				
+					Bienvenido/a  al modo <b>ADMINISTRADOR</b>.				
 				</h3>
-				<p class="mb-2 mt-3">Aquí podrás encontrar una guía rápida de uso:
+				<p class="mb-2 mt-3">Acabas de entrar con un usuario de administración:
 					<br><br>
-					En "<b>Panel de control</b>" podrás acceder a los datos de tu cuenta.
+					Ten en cuenta que tienes acceso a todos los recursos disponibles en la web.
+					Deberás tener cuidado con lo que hagas.
+					Se ha habilitado un log con todos los eventos ocurridos.
 					<br>
-					En "<b>Proyectos</b>" podrás realizar una búsqueda de los diferentes proyectos.
-					<br>
-					En "<b>Roles</b>" podrás ver a todos los usuarios, tanto usuarios como profesores.
+					<button onclick="funcion()">Haz click</button>
 				</p>
 			</div>
 			<div class="col-md-4">

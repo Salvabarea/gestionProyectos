@@ -11,7 +11,7 @@
     $buscar = $_POST["usuario"];
     $busqueda= mysqli_query ($conexion, "SELECT * FROM usuario WHERE Nombre like '%$buscar%'");
     while($registro = mysqli_fetch_array($busqueda)) {
-      if ($registro[7] == 1) {
+      if ($registro[6] == 'profesor') {
         $rol='Profesor';
         } else {
             $rol='Alumno';
@@ -20,7 +20,7 @@
         <tr>
           <td>'.$registro[0].'</td>
           <td>'.$registro[1].'</td>
-          <td>'.$registro[6].'</td>
+          <td>'.$registro[2].'</td>
           <td>'.$rol.'</td>
         </tr>
       ';

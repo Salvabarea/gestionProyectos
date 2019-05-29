@@ -2,6 +2,7 @@
 session_start();
 include('_con.php');
 error_reporting(0);
+$nombre = $_SESSION['nombre'];
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,19 @@ error_reporting(0);
 	include('head.php');
 	?>
 	<title>Principal</title>
+	<script>
+		function funcion() {
+		    <?php
+
+			$file = fopen("archivos/logs.txt", "a");
+
+			fwrite($file, "El usuario $nombre ha eliminado un proyecto.".PHP_EOL);
+
+			fclose($file);
+
+			?>
+		}
+	</script>
 </head>
 
 <!-- Cuerpo -->
@@ -42,7 +56,7 @@ error_reporting(0);
 								<label for="IdProyecto">Id del proyecto:</label>
 				            	<input type="IdProyecto" class="form-control" id= "IdProyecto" name="IdProyecto" placeholder="Id">
 				            	<br>
-				            	<input type="submit" class="btn btn-danger" value="ELIMINAR">
+				            	<input type="submit" class="btn btn-danger" value="ELIMINAR" onclick="funcion()">
 							</div>
 						</form>
 					</div>
