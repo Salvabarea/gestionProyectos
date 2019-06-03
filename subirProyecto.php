@@ -15,19 +15,6 @@ $nombre = $_SESSION['nombre'];
 	include('head.php');
 	?>
 	<title>Subir proyecto.</title>
-	<script>
-		function funcion() {
-		    <?php
-
-			$file = fopen("archivos/logs.txt", "a");
-
-			fwrite($file, "El usuario $nombre ha subido un proyecto.".PHP_EOL);
-
-			fclose($file);
-
-			?>
-		}
-	</script>
 </head>
 
 <!-- Cuerpo -->
@@ -59,7 +46,9 @@ $nombre = $_SESSION['nombre'];
 								<input type="hidden" name="MAX_FILE_SIZE" value="100000">
 								<input name="archivo" type="file">
 								<br><br>
-				            	<input type="submit" class="btn btn-primary" value="Subir"  onclick="funcion()">
+								<input type="text" name="descripcionArchivo" maxlength="100" placeholder="Descripcion del archivo">
+								<br><br>
+				            	<input type="submit" class="btn btn-primary" value="Subir">
 							</div>
 						</form>
 					</div>

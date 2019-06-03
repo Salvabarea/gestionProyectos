@@ -15,19 +15,6 @@ $nombre = $_SESSION['nombre'];
 	include('head.php');
 	?>
 	<title>Principal</title>
-	<script>
-		function funcion() {
-		    <?php
-
-			$file = fopen("archivos/logs.txt", "a");
-
-			fwrite($file, "El usuario $nombre ha modificado un usuario.".PHP_EOL);
-
-			fclose($file);
-
-			?>
-		}
-	</script>
 </head>
 
 <!-- Cuerpo -->
@@ -87,7 +74,7 @@ $nombre = $_SESSION['nombre'];
             					<option>Alumno</option>
 							</select>
 							<br>
-							<input type="submit" class="btn btn-primary" value="Modificar" onclick="funcion()">
+							<input type="submit" class="btn btn-primary" value="Modificar">
 				           </div>
 				        </form>
 					</div>

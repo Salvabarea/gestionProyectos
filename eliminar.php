@@ -15,19 +15,6 @@ $nombre = $_SESSION['nombre'];
 	include('head.php');
 	?>
 	<title>Principal</title>
-	<script>
-		function funcion() {
-		    <?php
-
-			$file = fopen("archivos/logs.txt", "a");
-
-			fwrite($file, "El usuario $nombre ha eliminado un proyecto.".PHP_EOL);
-
-			fclose($file);
-
-			?>
-		}
-	</script>
 </head>
 
 <!-- Cuerpo -->
@@ -56,7 +43,7 @@ $nombre = $_SESSION['nombre'];
 								<label for="IdProyecto">Id del proyecto:</label>
 				            	<input type="IdProyecto" class="form-control" id= "IdProyecto" name="IdProyecto" placeholder="Id">
 				            	<br>
-				            	<input type="submit" class="btn btn-danger" value="ELIMINAR" onclick="funcion()">
+				            	<input type="submit" class="btn btn-danger" value="ELIMINAR">
 							</div>
 						</form>
 					</div>

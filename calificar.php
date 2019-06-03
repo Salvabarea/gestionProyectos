@@ -15,19 +15,6 @@ $nombre = $_SESSION['nombre'];
 	include('head.php');
 	?>
 	<title>Principal</title>
-	<script>
-		function funcion() {
-		    <?php
-
-			$file = fopen("archivos/logs.txt", "a");
-
-			fwrite($file, "El usuario $nombre ha calificado un proyecto.".PHP_EOL);
-
-			fclose($file);
-
-			?>
-		}
-	</script>
 </head>
 
 <!-- Cuerpo -->
@@ -89,7 +76,7 @@ $nombre = $_SESSION['nombre'];
 				            <label for="alumno">Alumno:</label>
 				            <input type="text" class="form-control" id= "alumno" name="alumno" placeholder=<?php print_r($alumno) ?>>
 							<br>
-							<input type="submit" class="btn btn-primary" value="Modificar" onclick="funcion()">
+							<input type="submit" class="btn btn-primary" value="Modificar">
 				           </div>
 				        </form>
 
