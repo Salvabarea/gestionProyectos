@@ -15,6 +15,6 @@ error_reporting(0);
 	mysqli_query($conexion, "UPDATE proyecto SET Año= '$año' WHERE IdProyecto=$IdProyecto");
 	mysqli_query($conexion, "UPDATE proyecto SET Alumno='$alumno' WHERE IdProyecto=$IdProyecto");
 	mysqli_query($conexion, "UPDATE proyecto SET Nota='$nota' WHERE IdProyecto=$IdProyecto");
-
+	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Calificacion','$id', NOW())");
 Header('Location: proyectosProfesor.php');
 ?>

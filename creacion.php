@@ -23,5 +23,6 @@ $nombre = $_SESSION['nombre'];
 
 	fclose($file);
 
+	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Alta usuario','$id', NOW())");
 Header('Location: usuariosProf.php');
 ?>

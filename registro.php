@@ -22,6 +22,10 @@ $busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE Email='$correo'
 $nombre = mysqli_fetch_array($busqueda)[1];
 $_SESSION['nombre'] = $nombre;
 
+$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE Email='$correo'");
+$id = mysqli_fetch_array($busqueda)[0];
+$_SESSION['id'] = $id;
+
 // Apellido del usuario.
 $busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE Email='$correo'");
 $apellido = mysqli_fetch_array($busqueda)[2];

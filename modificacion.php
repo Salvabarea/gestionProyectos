@@ -17,5 +17,6 @@ error_reporting(0);
 	} else {
 		mysqli_query($conexion, "UPDATE usuario SET Rol=2 WHERE IdUsuario=$IdUsuario");
 	}
+	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Modificación usuario','$id', NOW())");
 Header('Location: panelModificacion.php');
 ?>
