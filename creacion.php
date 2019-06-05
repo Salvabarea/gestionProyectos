@@ -2,6 +2,8 @@
 session_start();
 include('_con.php');
 $nombre = $_SESSION['nombre'];
+$id = $_SESSION['id'];
+
  	$nombre = $_POST['nombre'];
 	$apellido = $_POST['apellido'];
 	$email = $_POST['email'];

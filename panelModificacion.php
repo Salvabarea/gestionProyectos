@@ -53,11 +53,11 @@ $nombre = $_SESSION['nombre'];
 						$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario='$IdUsuario'");
 						$nombre = mysqli_fetch_array($busqueda)[1];
 						$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario='$IdUsuario'");
-						$apellido = mysqli_fetch_array($busqueda)[6];
+						$apellido = mysqli_fetch_array($busqueda)[2];
 						$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario='$IdUsuario'");
 						$email = mysqli_fetch_array($busqueda)[4];
 						$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario='$IdUsuario'");
-						$rol = mysqli_fetch_array($busqueda)[7];
+						$rol = mysqli_fetch_array($busqueda)[6];
 						?>
 
 						<form action="modificacion.php" method="POST">

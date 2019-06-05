@@ -2,6 +2,7 @@
 session_start();
 include('_con.php');
 error_reporting(0);
+$id = $_SESSION['id'];
 
 	$IdProyecto = $_SESSION['IdProyecto'];
 	$nombre = $_POST['nombre'];
@@ -15,6 +16,6 @@ error_reporting(0);
 	mysqli_query($conexion, "UPDATE proyecto SET Año= '$año' WHERE IdProyecto=$IdProyecto");
 	mysqli_query($conexion, "UPDATE proyecto SET Alumno='$alumno' WHERE IdProyecto=$IdProyecto");
 	mysqli_query($conexion, "UPDATE proyecto SET Nota='$nota' WHERE IdProyecto=$IdProyecto");
-	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Calificacion','$id', NOW())");
+	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Calificar','$id', NOW())");
 Header('Location: proyectosProfesor.php');
 ?>

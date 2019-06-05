@@ -11,7 +11,7 @@ $id = $_SESSION['id'];
 	move_uploaded_file($_FILES['archivo']['tmp_name'], "archivos/$nombre.pdf");
 
 	mysqli_query ($conexion, "INSERT INTO proyecto (nombre, url, descripcion) VALUES ('$nombre','archivos/$nombre.pdf','$descripcion')");
-	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Subida','$id', NOW())");
+	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Subir','$id', NOW())");
 
 header("Location: subirProyecto.php");
 ?>
