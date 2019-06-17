@@ -13,7 +13,7 @@ error_reporting(0);
 	<?php
 	include('head.php');
 	?>
-	<title>Principal</title>
+	<title>Alta usuario</title>
 </head>
 
 <!-- Cuerpo -->
@@ -23,7 +23,10 @@ error_reporting(0);
 	<!-- Cabecera -->
 	<header>
 		<div class="container">
-			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			<div class="row">
+				<img src="img/jacalogo2.jpeg">
+				<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			</div>
 		</div>
 		<?php
 	        include("navbar.php");
@@ -57,6 +60,7 @@ error_reporting(0);
 				            </div>
 				        </form>
 					</div>
+					<br>
 				</div>
 			</div>
 	</div>

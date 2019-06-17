@@ -8,7 +8,7 @@ session_start();
 <!-- Cabecera -->
 
 <head>
-	<title>Panel de control</title>
+	<title>Perfil</title>
 	<?php
 	include('head.php');
 	?>
@@ -21,7 +21,10 @@ session_start();
 	<!-- Cabecera -->
 	<header>
 		<div class="container">
-			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			<div class="row">
+				<img src="img/jacalogo2.jpeg">
+				<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			</div>
 		</div>
 		<?php
 	        include("navbar.php");

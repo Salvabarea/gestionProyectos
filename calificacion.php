@@ -17,5 +17,5 @@ $id = $_SESSION['id'];
 	mysqli_query($conexion, "UPDATE proyecto SET Alumno='$alumno' WHERE IdProyecto=$IdProyecto");
 	mysqli_query($conexion, "UPDATE proyecto SET Nota='$nota' WHERE IdProyecto=$IdProyecto");
 	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Calificar','$id', NOW())");
-Header('Location: proyectosProfesor.php');
+header("Location: proyectosProfesor.php");
 ?>

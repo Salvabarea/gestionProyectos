@@ -13,5 +13,5 @@ $id = $_SESSION['id'];
 	mysqli_query ($conexion, "INSERT INTO proyecto (nombre, url, descripcion) VALUES ('$nombre','archivos/$nombre.pdf','$descripcion')");
 	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Subir','$id', NOW())");
 
-header("Location: subirProyecto.php");
+header("Location: comproProyectos.php");
 ?>

@@ -14,7 +14,7 @@ $nombre = $_SESSION['nombre'];
 	<?php
 	include('head.php');
 	?>
-	<title>Principal</title>
+	<title>Calificar proyecto</title>
 </head>
 
 <!-- Cuerpo -->
@@ -24,7 +24,10 @@ $nombre = $_SESSION['nombre'];
 	<!-- Cabecera -->
 	<header>
 		<div class="container">
-			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			<div class="row">
+				<img src="img/jacalogo2.jpeg">
+				<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			</div>
 		</div>
 		<?php
 	        include("navbar.php");

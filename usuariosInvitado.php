@@ -30,7 +30,10 @@ error_reporting(0);
 	<!-- Cabecera -->
 	<header>
 		<div class="container">
-			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			<div class="row">
+				<img src="img/jacalogo2.jpeg">
+				<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			</div>
 		</div>
 		<?php
 	        include("navbarInvitado.php");

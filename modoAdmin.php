@@ -11,7 +11,7 @@ if ($_SESSION['rol'] != 'admin') {
 <!-- Cabecera -->
 
 <head>
-	<title>Principal</title>
+	<title>Principal Supervisión</title>
 	<?php
 	include('head.php');
 	?>
@@ -24,10 +24,13 @@ if ($_SESSION['rol'] != 'admin') {
 	<!-- Cabecera -->
 	<header>
 		<div class="container">
-			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			<div class="row">
+				<img src="img/jacalogo2.jpeg">
+				<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			</div>
 		</div>
 		<?php
-	        include("navbar.php");
+	        include("navbarAdmin.php");
 	    ?> 
 	</header>
 
@@ -35,15 +38,15 @@ if ($_SESSION['rol'] != 'admin') {
 		<div class="row">
 			<div class="col-md-8">
 				<h3 class="mb-2 mt-3">
-					Bienvenido/a  al modo <b>ADMINISTRADOR</b>.				
+					Bienvenido/a  al modo <b>Supervisión</b>.				
 				</h3>
 				<p class="mb-2 mt-3">Acabas de entrar con un usuario de administración:
 					<br><br>
 					Ten en cuenta que tienes acceso a todos los recursos disponibles en la web.
 					Deberás tener cuidado con lo que hagas.
 					Se ha habilitado un log con todos los eventos ocurridos.
-					<br>
-					<button onclick="funcion()">Haz click</button>
+					<br><br>
+					<a class="btn btn-outline-success" href="log.php" role="button">Logs</a>
 				</p>
 			</div>
 			<div class="col-md-4">

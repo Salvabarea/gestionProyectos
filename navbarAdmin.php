@@ -10,10 +10,10 @@
         <a class="nav-link" href="principal.php">Inicio</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="perfil.php">Pefil usuario</a>
+        <a class="nav-link" href="log.php">Logs</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="comproProyectos.php">Proyectos</a>
+        <a class="nav-link" href="proyectosAdmin.php">Proyectos</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="comproUsuario.php">Usuarios</a>

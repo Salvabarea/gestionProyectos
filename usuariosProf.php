@@ -24,7 +24,7 @@ if ($_SESSION['rol'] == 'alumno') {
         });
       });
     </script>	
-	<title>Principal</title>
+	<title>Usuarios</title>
 </head>
 
 <!-- Cuerpo -->
@@ -34,7 +34,10 @@ if ($_SESSION['rol'] == 'alumno') {
 	<!-- Cabecera -->
 	<header>
 		<div class="container">
-			<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			<div class="row">
+				<img src="img/jacalogo2.jpeg">
+				<h1>Gestión de proyectos I.E.S. Jacarandá</h1>
+			</div>
 		</div>
 		<?php
 	        include("navbar.php");

@@ -26,5 +26,5 @@ $id = $_SESSION['id'];
 	fclose($file);
 
 	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Alta usuario','$id', NOW())");
-Header('Location: usuariosProf.php');
+header("Location: usuariosProf.php");
 ?>
