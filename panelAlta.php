@@ -50,10 +50,12 @@ error_reporting(0);
 				            <input type="text" class="form-control" id= "pass" name="pass">           
 				            <label for="email">Email:</label>
 				            <input type="email" class="form-control" id= "email" name="email">
+				            <label for="curso">Curso:</label>
+				            <input type="curso" class="form-control" id= "curso" name="curso">
 				          	<label for="rol">Rol:</label>
 				            <select type="text" class="form-control" id= "rol" name="rol">
-							    <option>Profesor</option>
-            					<option>Alumno</option>
+							    <option>profesor</option>
+            					<option>alumno</option>
 							</select>
 							<br>
 							<input type="submit" class="btn btn-primary" value="Alta usuario">

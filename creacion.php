@@ -8,16 +8,12 @@ $id = $_SESSION['id'];
 	$apellido = $_POST['apellido'];
 	$email = $_POST['email'];
 	$rol = $_POST['rol'];
+	$curso = $_POST['curso'];
 	$pass = $_POST['pass'];
 
-	if ($rol == 'Profesor') {
-		$rol = 1;
-	} else {
-		$rol = 0;
-	}
+	mysqli_query ($conexion, "INSERT INTO usuario (nombre, pass, email, imagen, apellido, rol) VALUES ('$nombre', '$pass', '$email','img/hm3.jpg','$apellido',$rol)");
 
-	$consulta = mysqli_query ($conexion, "INSERT INTO usuario (Nombre, Contrasena, Email, Imagen, Apellido, Rol) VALUES ('$nombre', '$pass', '$email','img/hm3.jpg','$apellido',$rol)");
-
+	$busqueda = mysqli_query ($conexion, "SELECT idUsuario FROM usuario WHERE email='$email");
 
 	$file = fopen("archivos/logs.txt", "a");
 

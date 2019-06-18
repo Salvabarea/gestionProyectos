@@ -44,12 +44,13 @@ $nombre = $_SESSION['nombre'];
 						<form action="subida.php" enctype="multipart/form-data" method="post">
 							<div class="form-group mx-4 mt-4">
 								<input type="text" name="nombreArchivo" size="20" maxlength="100" placeholder="Nombre del archivo">
-								<br>
-								<br>
-								<input type="hidden" name="MAX_FILE_SIZE" value="100000">
-								<input name="archivo" type="file">
 								<br><br>
 								<input type="text" name="descripcionArchivo" maxlength="100" placeholder="Descripcion del archivo">
+								<br><br>
+								<input type="text" name="añoArchivo" maxlength="100" placeholder="Año">
+								<br><br>
+								<input type="hidden" name="MAX_FILE_SIZE" value="100000">
+								<input name="archivo" type="file">
 								<br><br>
 				            	<input type="submit" class="btn btn-primary" value="Subir">
 							</div>
