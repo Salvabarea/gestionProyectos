@@ -37,27 +37,27 @@ include ("_con.php");
 	$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario=$IdUsuario");
 	$nombre = mysqli_fetch_array($busqueda)[1];
 	$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario=$IdUsuario");
-	$apellido = mysqli_fetch_array($busqueda)[6];
+	$apellido = mysqli_fetch_array($busqueda)[2];
 	$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario=$IdUsuario");
 	$email = mysqli_fetch_array($busqueda)[4];
-	$busqueda = mysqli_query($conexion, "SELECT a.Curso FROM alumno a, usuario u WHERE a.IdUsuario=$IdUsuario");
-	$curso = mysqli_fetch_array($busqueda)[0];
 	$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario=$IdUsuario");
 	$imagen = mysqli_fetch_array($busqueda)[5];
 	$busqueda = mysqli_query($conexion, "SELECT * FROM usuario WHERE IdUsuario=$IdUsuario");
-	$rol = mysqli_fetch_array($busqueda)[7];
+	$rol = mysqli_fetch_array($busqueda)[6];
+	if ($rol == 'profesor') {
+		$busqueda = mysqli_query($conexion, "SELECT p.Curso FROM profesor p, usuario u WHERE p.IdUsuario=$IdUsuario");
+		$curso = mysqli_fetch_array($busqueda)[0];
+	} else {
+		$busqueda = mysqli_query($conexion, "SELECT a.Curso FROM alumno a, usuario u WHERE a.IdUsuario=$IdUsuario");
+		$curso = mysqli_fetch_array($busqueda)[0];
+	}
 	?>
 
 	<div class="container fluid">
 		<div class="row">
 			<div class="col-md-8">
 				<h3 class="mb-2 mt-3">
-					Perfil del <?php 
-						if ($rol == 1) {
-							echo "profesor";
-						} else {
-							echo "alumno";
-						}
+					Perfil del <?php print_r($rol)
 					 ?> <?php print_r($nombre) ?>.
 				</h3>
 				<div class="card form-index mx-4 mt-4">
@@ -76,12 +76,7 @@ include ("_con.php");
 					</h5><p class="mx-2"><?php print_r($email) ?></p>
 					<h5 class="mt-3 mx-2">
 						Rol:
-					</h5><p class="mx-2"><?php 
-						if ($rol == 1) {
-							echo "Profesor";
-						} else {
-							echo "Alumno";
-						}
+					</h5><p class="mx-2"><?php print_r($rol)
 					 ?></p>
 				</div>
 			</div>

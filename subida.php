@@ -14,5 +14,9 @@ $id = $_SESSION['id'];
 	mysqli_query ($conexion, "INSERT INTO proyecto (nombre, url, descripcion, year) VALUES ('$nombre','archivos/$nombre.pdf','$descripcion', '$year')");
 	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Subir','$id', NOW())");
 
-header("Location: proyectosProfesor.php");
+if ($_SESSION['rol'] == 'profesor') {
+	header("Location: proyectosProfesor.php");
+} else {
+	header("Location: proyectosAdmin.php");
+}
 ?>

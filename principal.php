@@ -42,11 +42,13 @@ if ($_SESSION['rol'] == 'admin') {
 				</h3>
 				<p class="mb-2 mt-3">Aquí podrás encontrar una guía rápida de uso:
 					<br><br>
-					En "<b>Panel de control</b>" podrás acceder a los datos de tu cuenta.
+					En "<b>Perfil de usuario</b>" podrás revisar toda la información referente a tu usario.
 					<br>
-					En "<b>Proyectos</b>" podrás realizar una búsqueda de los diferentes proyectos.
+					En "<b>Proyectos</b>" podrás realizar una búsqueda de los diferentes proyectos, así como subir tus proyectos. Además, si eres profesor, podrás calificar o eliminar proyectos.
 					<br>
-					En "<b>Roles</b>" podrás ver a todos los usuarios, tanto usuarios como profesores.
+					En "<b>Usuarios</b>" podrás ver a todos los usuarios, tanto usuarios como profesores. Como profesor podrás dar de alta nuevos usuarios o modificarlos.
+					<br>
+					En "<b>Calendario</b>" podrás tener una vista de todos los eventos del curos relacionado con los proyectos y la entrega de los mismos.
 				</p>
 			</div>
 			<div class="col-md-4">

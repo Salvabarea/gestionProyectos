@@ -119,8 +119,12 @@ session_start();
       </div>
     </div>
     <?php
-          include("navbar.php");
-      ?> 
+      if ($_SESSION['nombre'] == 'admin') { 
+            include("navbarAdmin.php");
+          } else {
+            include("navbar.php");
+          }
+    ?> 
   </header>
   <br>
 

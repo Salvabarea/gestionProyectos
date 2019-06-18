@@ -29,7 +29,7 @@ error_reporting(0);
 			</div>
 		</div>
 		<?php
-	        include("navbar.php");
+	        include("navbarAdmin.php");
 	    ?> 
 	</header>
 

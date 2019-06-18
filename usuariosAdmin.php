@@ -36,7 +36,7 @@ error_reporting(0);
 			</div>
 		</div>
 		<?php
-	        include("navbar.php");
+	        include("navbarAdmin.php");
 	    ?> 
 	</header>
 	<div class="container fluid">
@@ -46,6 +46,15 @@ error_reporting(0);
 					include ("buscadorUsuarios.php");
 					include ("buscadorId.php");
 				?>
+				<br>
+				<h6><strong>Modificar información de usuario:</strong></h6>
+				<a class="btn btn-outline-success" href="panelModificacionAdmin.php" role="button">Modificar usuario</a>
+				<br><br>
+				<h6><strong>Dar de alta a un usuario:</strong></h6>
+				<a class="btn btn-outline-success" href="panelAltaAdmin.php" role="button">Alta usuario</a>
+				<br><br>
+				<h6><strong>Eliminar un usuario:</strong></h6>
+				<a class="btn btn-outline-danger" href="eliminarUsuarioAdmin.php" role="button">Eliminar</a>  
 
 			</div>
 			<div class="col-md-8">

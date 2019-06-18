@@ -8,16 +8,20 @@ $id = $_SESSION['id'];
 	$nuevoNombre = $_POST['nombre'];
 	$nuevoApellido = $_POST['apellido'];
 	$nuevoEmail = $_POST['email'];
+	$nuevaImagen = $_POST['imagen'];
 	$nuevoRol = $_POST['rol'];
 
-	mysqli_query($conexion, "UPDATE usuario SET Nombre='$nuevoNombre' WHERE IdUsuario=$IdUsuario");
-	mysqli_query($conexion, "UPDATE usuario SET Apellido='$nuevoApellido' WHERE IdUsuario=$IdUsuario");
-	mysqli_query($conexion, "UPDATE usuario SET Email='$nuevoEmail' WHERE IdUsuario=$IdUsuario");
-	if ($nuevoRol == 'Profesor') {
-		mysqli_query($conexion, "UPDATE usuario SET Rol=1 WHERE IdUsuario=$IdUsuario");
-	} else {
-		mysqli_query($conexion, "UPDATE usuario SET Rol=2 WHERE IdUsuario=$IdUsuario");
-	}
+	mysqli_query($conexion, "UPDATE usuario SET nombre='$nuevoNombre' WHERE IdUsuario=$IdUsuario");
+	mysqli_query($conexion, "UPDATE usuario SET apellido='$nuevoApellido' WHERE IdUsuario=$IdUsuario");
+	mysqli_query($conexion, "UPDATE usuario SET email='$nuevoEmail' WHERE IdUsuario=$IdUsuario");
+	mysqli_query($conexion, "UPDATE usuario SET rol='$nuevoRol' WHERE IdUsuario=$IdUsuario");
+	mysqli_query($conexion, "UPDATE usuario SET imagen='img/$nuevaImagen' WHERE IdUsuario=$IdUsuario");
+
 	mysqli_query ($conexion, "INSERT INTO log (accion, usuario, fecha) VALUES ('Modificar usuario','$id', NOW())");
-header("Location: usuariosProf.php");
+
+if ($_SESSION['rol'] == 'profesor') {
+	header("Location: usuariosProf.php");
+} else {
+	header("Location: usuariosAdmin.php");
+}
 ?>

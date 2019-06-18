@@ -39,9 +39,11 @@ session_start();
 				</h3>
 				<p class="mb-2 mt-3">Aquí podrás encontrar una guía rápida de uso:
 					<br><br>
-					En "<b>Proyectos</b>" podrás realizar una búsqueda de los diferentes proyectos.
+					En "<b>Proyectos</b>" podrás realizar una búsqueda de los diferentes proyectos, no podrás realizar ninguna acción adicional.
 					<br>
 					En "<b>Usuarios</b>" podrás ver a todos los usuarios, tanto usuarios como profesores.
+					<br>
+					En "<b>Calendario</b>" podrás tener una vista de todos los eventos del curos relacionado con los proyectos y la entrega de los mismos.
 				</p>
 			</div>
 			<div class="col-md-4">

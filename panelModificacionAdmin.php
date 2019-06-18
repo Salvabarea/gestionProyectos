@@ -30,7 +30,7 @@ $nombre = $_SESSION['nombre'];
 			</div>
 		</div>
 		<?php
-	        include("navbar.php");
+	        include("navbarAdmin.php");
 	    ?> 
 	</header>
 
