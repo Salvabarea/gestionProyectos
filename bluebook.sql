@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-06-2019 a las 14:38:57
+-- Tiempo de generación: 18-06-2019 a las 23:59:25
 -- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.3
+-- Versión de PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bluebook`
 --
-CREATE DATABASE IF NOT EXISTS `bluebook` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `bluebook`;
 
 -- --------------------------------------------------------
 
@@ -46,6 +44,20 @@ INSERT INTO `alumno` (`idAlumno`, `curso`, `idUsuario`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `evento`
+--
+
+CREATE TABLE `evento` (
+  `id` int(2) NOT NULL,
+  `titulo` varchar(100) NOT NULL,
+  `color` varchar(20) NOT NULL,
+  `inicio` date NOT NULL,
+  `final` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `log`
 --
 
@@ -55,6 +67,57 @@ CREATE TABLE `log` (
   `usuario` int(5) NOT NULL,
   `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `log`
+--
+
+INSERT INTO `log` (`id`, `accion`, `usuario`, `fecha`) VALUES
+(1, 'Subir', 2, '2019-06-06'),
+(2, 'Subir', 2, '2019-06-06'),
+(3, 'Subir', 1, '2019-06-07'),
+(4, 'Subir', 1, '2019-06-07'),
+(5, 'Alta usuario', 2, '2019-06-18'),
+(6, 'Modificar usuario', 2, '2019-06-18'),
+(7, 'Alta usuario', 2, '2019-06-18'),
+(8, 'Alta usuario', 2, '2019-06-18'),
+(9, 'Alta usuario', 2, '2019-06-18'),
+(10, 'Alta usuario', 2, '2019-06-18'),
+(11, 'Alta usuario', 2, '2019-06-18'),
+(12, 'Alta usuario', 2, '2019-06-18'),
+(13, 'Subir', 2, '2019-06-18'),
+(14, 'Subir', 2, '2019-06-18'),
+(15, 'Subir', 2, '2019-06-18'),
+(16, 'Subir', 2, '2019-06-18'),
+(17, 'Subir', 2, '2019-06-18'),
+(18, 'Subir', 2, '2019-06-18'),
+(19, 'Subir', 2, '2019-06-18'),
+(20, 'Subir', 2, '2019-06-18'),
+(21, 'Calificar', 2, '2019-06-18'),
+(22, 'Calificar', 2, '2019-06-18'),
+(23, 'Calificar', 2, '2019-06-18'),
+(24, 'Modificar usuario', 2, '2019-06-18'),
+(25, 'Alta usuario', 2, '2019-06-18'),
+(26, 'Alta usuario', 2, '2019-06-18'),
+(27, 'Alta usuario', 2, '2019-06-18'),
+(28, 'Modificar usuario', 2, '2019-06-18'),
+(29, 'Subir', 3, '2019-06-18'),
+(30, 'Calificar', 3, '2019-06-18'),
+(31, 'Calificar', 3, '2019-06-18'),
+(32, 'Eliminar', 3, '2019-06-18'),
+(33, 'Modificar usuario', 3, '2019-06-18'),
+(34, 'Modificar usuario', 3, '2019-06-18'),
+(35, 'Alta usuario', 3, '2019-06-18'),
+(36, 'Eliminar', 3, '2019-06-18'),
+(37, 'Subir', 3, '2019-06-18'),
+(38, 'Eliminar', 3, '2019-06-18'),
+(39, 'Eliminar', 3, '2019-06-18'),
+(40, 'Alta curso', 3, '2019-06-18'),
+(41, 'Alta curso', 3, '2019-06-18'),
+(42, 'Alta curso', 3, '2019-06-18'),
+(43, 'Alta curso', 3, '2019-06-18'),
+(44, 'Alta curso', 3, '2019-06-18'),
+(45, 'Alta curso', 3, '2019-06-18');
 
 -- --------------------------------------------------------
 
@@ -86,7 +149,7 @@ CREATE TABLE `proyecto` (
   `nombre` varchar(100) DEFAULT NULL,
   `descripcion` varchar(100) DEFAULT NULL,
   `nota` int(2) DEFAULT NULL,
-  `año` varchar(4) DEFAULT NULL,
+  `year` varchar(4) DEFAULT NULL,
   `url` varchar(100) DEFAULT NULL,
   `alumno` int(5) DEFAULT NULL,
   `profesor` int(5) DEFAULT NULL
@@ -96,8 +159,8 @@ CREATE TABLE `proyecto` (
 -- Volcado de datos para la tabla `proyecto`
 --
 
-INSERT INTO `proyecto` (`idProyecto`, `nombre`, `descripcion`, `nota`, `año`, `url`, `alumno`, `profesor`) VALUES
-(1, 'Gestion de proyectos de un sitio web', 'Mi proyecto.', 7, '2019', NULL, 1, 1);
+INSERT INTO `proyecto` (`idProyecto`, `nombre`, `descripcion`, `nota`, `year`, `url`, `alumno`, `profesor`) VALUES
+(1, 'Gestion de proyectos de un sitio web', 'Mi proyecto.', 7, '2019', 'archivos/Gestion_de_proyectos_de_un_sitio_web_de_prueba.pdf', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -136,6 +199,12 @@ ALTER TABLE `alumno`
   ADD KEY `fk_alumno` (`idUsuario`);
 
 --
+-- Indices de la tabla `evento`
+--
+ALTER TABLE `evento`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `log`
 --
 ALTER TABLE `log`
@@ -171,31 +240,37 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `alumno`
 --
 ALTER TABLE `alumno`
-  MODIFY `idAlumno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idAlumno` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `evento`
+--
+ALTER TABLE `evento`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `profesor`
 --
 ALTER TABLE `profesor`
-  MODIFY `idProfesor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idProfesor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `proyecto`
 --
 ALTER TABLE `proyecto`
-  MODIFY `idProyecto` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `idProyecto` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idUsuario` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
