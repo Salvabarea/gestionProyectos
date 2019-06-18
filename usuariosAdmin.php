@@ -53,6 +53,12 @@ error_reporting(0);
 				<h6><strong>Dar de alta a un usuario:</strong></h6>
 				<a class="btn btn-outline-success" href="panelAltaAdmin.php" role="button">Alta usuario</a>
 				<br><br>
+				<h6><strong>Curso Alumno:</strong></h6>
+				<a class="btn btn-outline-success" href="cursosAlumno.php" role="button">Cursos alumno</a>
+				<br><br>
+				<h6><strong>Curso Profesor:</strong></h6>
+				<a class="btn btn-outline-success" href="cursosProfesor.php" role="button">Cursos profesor</a>
+				<br><br>
 				<h6><strong>Eliminar un usuario:</strong></h6>
 				<a class="btn btn-outline-danger" href="eliminarUsuarioAdmin.php" role="button">Eliminar</a>  
 
