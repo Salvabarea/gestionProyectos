@@ -7,7 +7,7 @@ session_start();
 
 <!-- Cabecera -->
 
-<head>	
+<head>
 	<?php
 	include('head.php');
 	?>

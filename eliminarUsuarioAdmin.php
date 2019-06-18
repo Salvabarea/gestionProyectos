@@ -14,7 +14,7 @@ $nombre = $_SESSION['nombre'];
 	<?php
 	include('head.php');
 	?>
-	<title>Eliminar proyecto</title>
+	<title>Eliminar usuario</title>
 </head>
 
 <!-- Cuerpo -->
