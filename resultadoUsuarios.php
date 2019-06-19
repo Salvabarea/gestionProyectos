@@ -13,9 +13,11 @@
     while($registro = mysqli_fetch_array($busqueda)) {
       if ($registro[6] == 'profesor') {
         $rol='Profesor';
-        } else {
+        } elseif ($registro[6] == 'alumno') {
             $rol='Alumno';
-        };
+        } else {
+            $rol='Administrador';
+        }
       echo '
         <tr>
           <td>'.$registro[0].'</td>
